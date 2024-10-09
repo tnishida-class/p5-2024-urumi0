@@ -36,6 +36,9 @@ function drawArcs(c1, c2, r) {
     let start = TWO_PI / 20 * i;
     let stop = TWO_PI / 20 * (i + 1);
     fill(i % 2 == 0 ? c1 : c2);
+    const cx = width / 2;
+    const cy = height / 2;
     arc(cx, cy, r, r, start, stop, PIE);
+    
   }
 }
