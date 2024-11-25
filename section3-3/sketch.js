@@ -4,7 +4,7 @@ let x, y;
 function setup(){
   createCanvas(windowWidth, windowHeight);
   x = width / 2;
-  y = height / 2;
+  y = height;
 }
 
 function draw(){
@@ -14,8 +14,9 @@ function draw(){
   if(keyIsDown(RIGHT_ARROW)){ x += 5; }
   if(keyIsDown(UP_ARROW)){ y -= 5; }
   if(keyIsDown(DOWN_ARROW)){ y += 5; }
-  if(keyIsDown("A".charCodeAt(0))){ x+= 10; }
-  if(keyIsDown(" ".charCodeAt(0))){ x-= 10; }
+
+  if(keyIsDown(LEFT_ARROW)&&keyIsDown("A".charCodeAt(0))){ x-= 10; }
+  if(keyIsDown(RIGHT_ARROW)&&keyIsDown("A".charCodeAt(0))){ x+= 10; }
 }
 
 // イベントハンドラを使用するパターン
